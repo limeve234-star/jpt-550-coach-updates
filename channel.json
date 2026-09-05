@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "latestBankVersion": "2026.09-update-v2",
+  "updates": [
+    {
+      "updateId": "2026.09-demo-01",
+      "fromBankVersion": "2026.09-core-v1",
+      "bankVersion": "2026.09-update-v1",
+      "title": "문제은행 업데이트 테스트팩 01",
+      "questionCount": 11,
+      "url": "updates/2026.09-demo-01.json",
+      "sha256": "9267342ef0d24f6dec33654fed37a584b64c2c39c2be355715ced47bed7a7dae"
+    },
+    {
+      "updateId": "2026.09-demo-02",
+      "fromBankVersion": "2026.09-update-v1",
+      "bankVersion": "2026.09-update-v2",
+      "title": "문제은행 업데이트 테스트팩 02",
+      "questionCount": 11,
+      "url": "updates/2026.09-demo-02.json",
+      "sha256": "02cc033c83608db9a935b7a25d7914c9a8c69c56c7878936d93837cb67f66c71"
+    }
+  ],
+  "channelId": "jpt-reading-stable-sample",
+  "channelName": "JPT Reading 온라인 배포 예제",
+  "description": "정적 HTTPS 호스팅에 그대로 올려 구조를 검증할 수 있는 예제 채널입니다.",
+  "minAppVersion": "v7.8"
+}
