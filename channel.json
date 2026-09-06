@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "latestBankVersion": "2026.09-update-v2",
+  "latestBankVersion": "2026.09-lv2-600-v1",
   "updates": [
     {
       "updateId": "2026.09-demo-01",
@@ -9,7 +9,8 @@
       "title": "문제은행 업데이트 테스트팩 01",
       "questionCount": 11,
       "url": "updates/2026.09-demo-01.json",
-      "sha256": "9267342ef0d24f6dec33654fed37a584b64c2c39c2be355715ced47bed7a7dae"
+      "sha256": "9267342ef0d24f6dec33654fed37a584b64c2c39c2be355715ced47bed7a7dae",
+      "unlockLevel": 2
     },
     {
       "updateId": "2026.09-demo-02",
@@ -18,11 +19,22 @@
       "title": "문제은행 업데이트 테스트팩 02",
       "questionCount": 11,
       "url": "updates/2026.09-demo-02.json",
-      "sha256": "02cc033c83608db9a935b7a25d7914c9a8c69c56c7878936d93837cb67f66c71"
+      "sha256": "02cc033c83608db9a935b7a25d7914c9a8c69c56c7878936d93837cb67f66c71",
+      "unlockLevel": 2
+    },
+    {
+      "updateId": "2026.09-lv2-600-01",
+      "fromBankVersion": "2026.09-update-v2",
+      "bankVersion": "2026.09-lv2-600-v1",
+      "title": "Lv.2 성장 문제은행 600 완성팩",
+      "questionCount": 48,
+      "url": "updates/2026.09-lv2-600-01.json",
+      "sha256": "4ee38ccafed72bb3d2d30b0f20ea9553573d92d363c5ebbdfe1e9c2d252e67b8",
+      "unlockLevel": 2
     }
   ],
   "channelId": "jpt-reading-stable-sample",
-  "channelName": "JPT Reading 온라인 배포 예제",
-  "description": "정적 HTTPS 호스팅에 그대로 올려 구조를 검증할 수 있는 예제 채널입니다.",
-  "minAppVersion": "v7.8"
+  "channelName": "JPT 550 Coach 운영 채널",
+  "description": "JPT 550 Coach 읽기 문제은행의 단계별 공식 온라인 업데이트 채널입니다.",
+  "minAppVersion": "v8.0.4"
 }
