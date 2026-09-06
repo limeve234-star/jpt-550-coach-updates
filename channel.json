@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "latestBankVersion": "2026.09-lv2-600-v1",
+  "latestBankVersion": "2026.09-lv3-700-v1",
   "updates": [
     {
       "updateId": "2026.09-demo-01",
@@ -31,6 +31,16 @@
       "url": "updates/2026.09-lv2-600-01.json",
       "sha256": "4ee38ccafed72bb3d2d30b0f20ea9553573d92d363c5ebbdfe1e9c2d252e67b8",
       "unlockLevel": 2
+    },
+    {
+      "updateId": "2026.09-lv3-700-01",
+      "fromBankVersion": "2026.09-lv2-600-v1",
+      "bankVersion": "2026.09-lv3-700-v1",
+      "title": "Lv.3 실전 문제은행 700 확장팩 01",
+      "questionCount": 100,
+      "url": "updates/2026.09-lv3-700-01.json",
+      "sha256": "9c5d9e7e149b24619b7677c71d35ea70ec9cd5601188141bb6eccff884e1752a",
+      "unlockLevel": 3
     }
   ],
   "channelId": "jpt-reading-stable-sample",
