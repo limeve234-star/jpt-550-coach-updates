@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "latestBankVersion": "2026.09-lv3-800-v1",
+  "latestBankVersion": "2026.09-lv3-900-v1",
   "updates": [
     {
       "updateId": "2026.09-demo-01",
@@ -50,6 +50,16 @@
       "questionCount": 100,
       "url": "updates/2026.09-lv3-800-02.json",
       "sha256": "c34b38d9f21ebd97221300375d70c00460f6408aa79cf88a37d56d75667d7e2f",
+      "unlockLevel": 3
+    },
+    {
+      "updateId": "2026.09-lv3-900-03",
+      "fromBankVersion": "2026.09-lv3-800-v1",
+      "bankVersion": "2026.09-lv3-900-v1",
+      "title": "Lv.3 실전 문제은행 900 완성팩 03",
+      "questionCount": 100,
+      "url": "updates/2026.09-lv3-900-03.json",
+      "sha256": "15cbe63074d3c4ba1dc778d608ecfa517e6bf839092b515b1cf9f12de9900770",
       "unlockLevel": 3
     }
   ],
