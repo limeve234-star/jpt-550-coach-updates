@@ -1,0 +1,80 @@
+name: Update JPT exam info and deploy Pages
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    # 매일 한국시간 오전 6:10 (UTC 21:10)
+    - cron: '10 21 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: jpt-exam-pages
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: scripts/requirements-exam.txt
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements-exam.txt
+
+      - name: Check official JPT schedule and centers
+        run: python scripts/update_exam_info.py
+
+      - name: Commit exam info only when changed
+        shell: bash
+        run: |
+          if git diff --quiet -- exam_info.json; then
+            echo "No exam info change."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add exam_info.json
+            git commit -m "chore: update JPT exam info"
+            git push
+          fi
+
+      - name: Prepare Pages site
+        shell: bash
+        run: |
+          rm -rf _site
+          mkdir -p _site
+          cp index.html _site/
+          cp channel.json _site/
+          cp exam_info.json _site/
+          cp -R updates _site/
+          touch _site/.nojekyll
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
