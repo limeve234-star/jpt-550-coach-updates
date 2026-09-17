@@ -76,5 +76,5 @@
   "channelId": "jpt-reading-stable-sample",
   "channelName": "알프스 JPT 독해 연습 운영 채널",
   "description": "알프스 JPT 독해 연습의 단계별 온라인 문제은행 업데이트 채널입니다.",
-  "minAppVersion": "v8.0.4"
+  "minAppVersion": "v1.0.0"
 }
